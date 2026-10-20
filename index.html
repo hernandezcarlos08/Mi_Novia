@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7ef">
+  <title>10 razones para elegirte ♡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+    :root{--ink:#382b35;--rose:#c76b76;--cream:#fff8f0;--gold:#e4b874;--muted:#766873}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:var(--cream)}
+    .hero{min-height:100svh;position:relative;display:grid;place-items:center;text-align:center;overflow:hidden;padding:52px 22px;background:linear-gradient(180deg,rgba(27,30,48,.17),rgba(33,24,38,.56)),url('foto-playa.jpeg') center 54%/cover}
+    .hero:after{content:'♡';position:absolute;right:8%;top:12%;font-size:clamp(50px,9vw,110px);color:#fff9;transform:rotate(13deg);animation:float 4s ease-in-out infinite}
+    .hero-copy{position:relative;z-index:1;color:white;max-width:750px;text-shadow:0 3px 20px #2a182d88;animation:appear 1.2s ease both}
+    .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:#ffe2c6}.hero h1{font:600 clamp(3rem,8vw,6.4rem)/1.02 'Playfair Display',serif;margin:22px 0}.hero h1 em{font-weight:500;color:#ffe0c6}.hero p{font-size:clamp(1rem,2.4vw,1.22rem);line-height:1.7;max-width:540px;margin:0 auto 28px;color:#fff8f3}
+    .button{border:0;border-radius:99px;background:#fff7ef;color:#693e4b;padding:15px 24px;font:700 .95rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 24px #28101c33;transition:transform .2s,box-shadow .2s}.button:hover{transform:translateY(-3px);box-shadow:0 12px 30px #28101c44}.button span{margin-left:8px;color:var(--rose)}
+    .scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size:.68rem;opacity:.85;animation:bob 1.8s infinite}.scroll b{display:block;font-size:1.3rem;margin-top:6px}
+    main{padding:90px 22px 76px}.intro{text-align:center;max-width:650px;margin:0 auto 42px}.kicker{color:var(--rose);letter-spacing:.18em;text-transform:uppercase;font-size:.74rem;font-weight:700}.intro h2{font:600 clamp(2.3rem,5vw,4rem)/1.1 'Playfair Display',serif;margin:13px 0}.intro p{color:var(--muted);line-height:1.75;margin:0}
+    .reasons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1020px;margin:auto}.reason{padding:23px 22px 24px;min-height:157px;background:#fffdfb;border:1px solid #f1e3dc;border-radius:18px;box-shadow:0 8px 26px #693e4b0a;opacity:0;transform:translateY(18px);transition:opacity .55s,transform .55s,box-shadow .2s}.reason.visible{opacity:1;transform:translateY(0)}.reason:hover{box-shadow:0 14px 34px #693e4b18;transform:translateY(-3px)}.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fae8e6;color:var(--rose);font:600 .9rem 'Playfair Display',serif}.reason p{font:500 1.02rem/1.55 'Playfair Display',serif;margin:14px 0 0}
+    .note{max-width:780px;margin:78px auto 0;text-align:center;padding:clamp(28px,6vw,54px);border-radius:26px;background:linear-gradient(135deg,#f8e6df,#fff1df);position:relative;overflow:hidden}.note:before,.note:after{content:'✦';position:absolute;color:#d89183aa;font-size:2rem}.note:before{top:18px;left:22px}.note:after{bottom:18px;right:22px}.note h2{font:600 clamp(2rem,4vw,3.25rem) 'Playfair Display',serif;margin:10px 0 14px}.note p{max-width:560px;margin:auto;color:#64535e;line-height:1.8}.signature{font:italic 1.25rem 'Playfair Display',serif;color:var(--rose);margin-top:23px!important}
+    footer{text-align:center;padding:24px;color:#8a7c84;font-size:.82rem}.music{position:fixed;z-index:5;right:18px;bottom:18px;display:flex;align-items:center;gap:10px;padding:11px 15px 11px 11px;background:#fffdf7ed;border:1px solid #f1dfd6;border-radius:99px;box-shadow:0 8px 30px #39263622;color:var(--ink);font-size:.8rem;font-weight:600;backdrop-filter:blur(8px)}.music button{width:38px;height:38px;border:0;border-radius:50%;background:var(--rose);color:white;font-size:1rem;cursor:pointer}.music small{display:block;color:var(--muted);font-weight:400;margin-top:2px}.player-panel{display:none;position:fixed;z-index:6;right:18px;bottom:82px;width:min(340px,calc(100vw - 36px));padding:10px;background:#fffdf7;border:1px solid #f1dfd6;border-radius:16px;box-shadow:0 12px 36px #39263633}.player-panel.open{display:block}.player-panel iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px}.close-player{display:block;margin:7px 2px 0 auto;border:0;background:none;color:var(--muted);font:500 .8rem 'DM Sans',sans-serif;cursor:pointer}
+    @keyframes float{50%{transform:translateY(-10px) rotate(5deg)}}@keyframes bob{50%{transform:translate(-50%,6px)}}@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:760px){.reasons{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.reason{padding:19px;min-height:145px}.hero{background-position:53% center}}
+    @media(max-width:460px){.reasons{grid-template-columns:1fr}.reason{min-height:auto}.hero{padding-bottom:90px}.music{right:12px;bottom:12px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Para la persona que hace todo más bonito</div>
+      <h1>10 razones<br><em>para elegirte</em></h1>
+      <p>Hay momentos que quisiera guardar para siempre. Este atardecer es uno de ellos… y tú eres mi parte favorita.</p>
+      <button class="button" onclick="document.querySelector('#razones').scrollIntoView({behavior:'smooth'})">Tengo algo para ti <span>♡</span></button>
+    </div>
+    <div class="scroll">sigue leyendo<b>↓</b></div>
+  </header>
+  <main>
+    <section class="intro" id="razones">
+      <div class="kicker">Una por cada latido extra</div>
+      <h2>Me enamoré de ti porque…</h2>
+      <p>Y aunque podría escribir muchísimas más, aquí van diecinueve que siempre me hacen sonreír.</p>
+    </section>
+    <section class="reasons" aria-label="Diez razones por las que me enamoré de ti">
+      <article class="reason"><span class="num">01</span><p>Tu sonrisa puede cambiar por completo mi día.</p></article>
+      <article class="reason"><span class="num">02</span><p>Contigo, hasta lo más sencillo se vuelve especial.</p></article>
+      <article class="reason"><span class="num">03</span><p>Me encanta la forma en que miras el mundo.</p></article>
+      <article class="reason"><span class="num">04</span><p>Tu risa es de mis sonidos favoritos.</p></article>
+      <article class="reason"><span class="num">05</span><p>Me haces sentir en casa, esté donde esté.</p></article>
+      <article class="reason"><span class="num">06</span><p>Admiro tu manera tan única de ser.</p></article>
+      <article class="reason"><span class="num">07</span><p>Siempre encuentras cómo sacarme una sonrisa.</p></article>
+      <article class="reason"><span class="num">08</span><p>Tu ternura aparece hasta en los pequeños detalles.</p></article>
+      <article class="reason"><span class="num">09</span><p>Me escuchas y haces que me sienta comprendido.</p></article>
+      <article class="reason"><span class="num">10</span><p>Estar a tu lado hace que el tiempo vuele.</p></article>
+    </section>
+    <section class="note">
+      <div class="kicker">Mi lugar favorito</div>
+      <h2>Es a tu lado</h2>
+      <p>Gracias por cada abrazo, cada risa y cada recuerdo. Ojalá sigamos coleccionando atardeceres juntos. Te quiero muchísimo.</p>
+      <p class="signature">Con todo mi amor, para ti ♡</p>
+    </section>
+  </main>
+  <footer>Hecho con mucho amor ♡</footer>
+  <div class="music" aria-label="Música">
+    <button id="play" aria-label="Reproducir música">▶</button>
+    <div>Una canción para ti<small>Te quiero tanto, tanto · Onda Vaselina</small></div>
+  </div>
+  <div class="player-panel" id="player-panel"><iframe id="player" title="Te quiero tanto, tanto de Onda Vaselina" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe><button class="close-player" id="close-player">Cerrar ×</button></div>
+  <script>
+    const cards=document.querySelectorAll('.reason');
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+    cards.forEach((card,index)=>{card.style.transitionDelay=`${(index%3)*65}ms`;observer.observe(card)});
+    const panel=document.querySelector('#player-panel'),player=document.querySelector('#player'),play=document.querySelector('#play');
+    play.addEventListener('click',()=>{panel.classList.toggle('open');if(!player.src)player.src='https://www.youtube-nocookie.com/embed/u2cia3Pecr4?autoplay=1&controls=1&playsinline=1';});
+    document.querySelector('#close-player').addEventListener('click',()=>{panel.classList.remove('open');player.src='';});
+  </script>
+</body>
+</html>
+
+
